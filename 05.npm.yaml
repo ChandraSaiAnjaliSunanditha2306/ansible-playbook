@@ -4,9 +4,9 @@
   tasks:
     - name: install npm package
       ansible.builtin.package:
-        name: install npm
+        name: =npm
         state: present
-    - name: run npm
+    - name: run npm service
       ansible.builtin.service:
-        name: run npm package
+        name: npm
         state: started
