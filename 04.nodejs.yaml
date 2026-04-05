@@ -2,11 +2,11 @@
   hosts: web
   become: yes
   tasks:
-  - name: install nodejs
-    ansible.builtin.package:
-    name: nodejs
-    state: present
-  - name: start nodejs
-    ansible.builtin.sevice:
-    name: nodejs
-    state: started
+    - name: install nodejs
+      ansible.builtin.package:
+      name: nodejs
+      state: present
+    - name: start nodejs
+      ansible.builtin.sevice:
+      name: nodejs
+      state: started
