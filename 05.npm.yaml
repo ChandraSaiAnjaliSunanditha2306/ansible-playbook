@@ -6,7 +6,7 @@
       ansible.builtin.package:
         name: install npm
         state: present
-    - name: install npm
+    - name: run npm
       ansible.builtin.service:
         name: run npm
         state: started
