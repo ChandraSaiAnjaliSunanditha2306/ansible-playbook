@@ -1,16 +1,12 @@
-- name: Install Node.js and npm
+- name: Install and run Node.js
   hosts: web
   become: yes
   tasks:
-    - name: Install Node.js and npm packages
+    - name: Install Node.js
       ansible.builtin.package:
-        name:
-          - nodejs
-          - npm
+        name: nodejs
         state: present
-    - name: run Node.js and npm packages
-      ansible.builtin.package:
-        name:
-          - nodejs
-          - npm
-        state: started
+    - name: Start Node.js service
+      ansible.builtin.service:
+        name: nodejs
+        state: started        
