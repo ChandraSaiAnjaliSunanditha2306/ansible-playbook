@@ -4,9 +4,9 @@
   tasks:
     - name: install Nodejs
       ansible.builtin.package:
-      name: Nodejs
-      state: present
+        name: Nodejs
+        state: present
     - name: start Nodejs
       ansible.builtin.sevice:
-      name: Nodejs
-      state: started
+        name: Nodejs
+        state: started
