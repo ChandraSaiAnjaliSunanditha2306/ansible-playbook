@@ -7,7 +7,7 @@
     TRAINER: Siva
   tasks:
   - name: print the variable
-    vars: 
+    vars: #task level variables, task level can overide play or golbal level variables
       COURSE: Ansible
     ansible.builtin.debug:
       msg: "Course is {{COURSE}}, Duration is {{DURATION}}, MENTOR is {{TRAINER}}"
