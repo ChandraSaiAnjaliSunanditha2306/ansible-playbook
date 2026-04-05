@@ -1,0 +1,12 @@
+- name: install and run npm
+  hosts: webb
+  become: yes
+  tasks:
+    - name: install npm
+      ansible.builtin.package:
+        name: install npm
+        state: present
+    - name: install npm
+      ansible.builtin.service:
+        name: run npm
+        state: started
