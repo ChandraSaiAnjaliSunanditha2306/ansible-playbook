@@ -1,12 +1,12 @@
-- name: Install and run Node.js
+- name: Install and run mysql
   hosts: web
   become: yes
   tasks:
-    - name: Install Node.js
+    - name: Install mysql
       ansible.builtin.package:
-        name: nodejs
+        name: mysql
         state: present
-    - name: Start Node.js service
+    - name: Start mysql
       ansible.builtin.service:
-        name: nodejs
+        name: mysql
         state: started        
