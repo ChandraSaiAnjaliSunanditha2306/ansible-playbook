@@ -1,0 +1,19 @@
+- name: Print course information
+  host: localhost
+  connection: yes
+  vars:
+    course: AWS with DevOps
+    Duration: 120
+    topics:
+    - ansible
+    - linux
+    - shell
+    - AWS
+    live: true
+    tools:
+    - ci: jenkins
+    - cloud: AWS
+    - containerization: docker
+  tasks:
+  ansible.builtin.debug:
+    msg: "Course is {{course}}, duration is {{Duration}},topics are {{topics}},"  
