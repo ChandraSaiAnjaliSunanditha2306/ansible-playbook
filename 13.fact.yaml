@@ -2,5 +2,5 @@
   hosts: web
   tasks:
   - name: print the facts
-    ansible.builtin.debbug:
+    ansible.builtin.debug:
       msg: "{{ ansible_facts}}"
