@@ -1,0 +1,11 @@
+- name: print names
+  hosts: web
+  connection: yes
+  tasks:
+  - name: print names
+    ansible.builtin.debug:
+      msg: "{{ iteam }}"
+    loop:
+    - anjali
+    - teja
+    - sai
